@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/viewer.css">
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../dist/viewer.js"></script>
+    <style>
+        p>a{
+            display:block;
+            height: 50px;
+            width: 50px;
+            z-index: 100;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><img class="docs-pictures" data-original="../assets/img/tibet-2.jpg" src="../assets/img/thumbnails/tibet-2.jpg" alt="Tibetan Plateau"></li>
+        <li><img class="docs-pictures" data-original="../assets/img/tibet-4.jpg" src="../assets/img/thumbnails/tibet-4.jpg" alt="Potala Palace 1"></li>
+    </ul>
+    
+    
+    <p><a href="#">测试</a></p>
+    <script>
+        $(function () {
+            $.fn.viewer.setDefaults({
+                title: false,
+                navbar: false
+            });
+            var $images = $('.docs-pictures').viewer();
+        })
+    </script>
+</body>
+
+</html>
